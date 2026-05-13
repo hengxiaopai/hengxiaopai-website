@@ -1,0 +1,24 @@
+name: Generate demo content
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate demo outputs
+        run: python -m github_hot_article_studio.main --mode demo
+      - name: Upload generated outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-outputs
+          path: outputs/
