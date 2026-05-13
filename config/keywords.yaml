@@ -1,0 +1,22 @@
+keywords:
+  - AI Agent
+  - LLM
+  - RAG
+  - MCP
+  - text to video
+  - image generation
+  - browser automation
+  - developer tools
+  - workflow automation
+  - open source AI
+
+filters:
+  min_stars: 300
+  min_forks: 20
+  pushed_within_days: 45
+  created_within_days: 365
+
+article:
+  language: zh-CN
+  min_words: 2500
+  style: professional, readable, opinionated, useful for Chinese developers
